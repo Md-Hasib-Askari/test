@@ -1,12 +1,25 @@
 import mongoose from 'mongoose';
-const todosSchema = new mongoose.Schema(
-    {
-        name: { type: String, required: true },
-        description: { type: String, required: true }
+
+const postSchema = mongoose.Schema({
+    topic: {
+        type: String,
     },
-    { timestamps: true, versionKey: false }
-);
+    details: {
+        type: String,
+    },
+    date: {
+        type: Date,
+        default: Date.now(),
+    },
+    user: {
+        type: mongoose.Types.ObjectId,
+        ref: "User",
+    }
+}, {
+    versionKey: false,
+    timestamps: true,
+});
 
-const todos = mongoose.model('todos', todosSchema);
+const Post = new mongoose.model("Post", postSchema);
 
-export default todos;
+module.exports = Post;

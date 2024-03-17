@@ -1,4 +1,4 @@
-export const MONGODB_CONNECTION = "mongodb+srv://mrrabbil:mernx123@cluster0.rtpbcy6.mongodb.net/app_todo?retryWrites=true&w=majority";
+export const MONGODB_CONNECTION = "mongodb+srv://rnadoha:9caiL8qpiT9QeMxW@final.pgrmvz5.mongodb.net/social-media?retryWrites=true&w=majority&appName=final";
 
 export const JWT_SECRET = "5EC7CEFA1BE7C9354A639369A2AA8";
 export const JWT_EXPIRATION_TIME = 60*60*24*30; // 30 Days
@@ -16,4 +16,4 @@ export const REQUEST_LIMIT_NUMBER = 3000; // Per 15 Min 3000 Request Allowed
 
 export const WEB_CACHE=false;
 
-export const PORT=3000;
+export const PORT=5000;
